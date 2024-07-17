@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formas de Contacto - Agenda Médica</title>
+    <link rel="stylesheet" href="/css/menu.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .main-content {
             background: url('img/santafe.jpg') center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            position: relative;
         }
         .overlay {
             position: absolute;
@@ -26,10 +26,10 @@
         }
         .container {
             max-width: 400px;
-            background-color: hwb(207 65% 18%);
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             position: relative; 
         }
         h2 {
@@ -73,25 +73,38 @@
     </style>
 </head>
 <body>
-    
-    <div class="overlay"></div> 
-    <div class="container">
-        <h2>Formas de Contacto - Agenda Médica</h2>
-        <form action="submit_form.php" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+    <header>
+        <h1><img src="/img/logo2.png" alt="" style="width: 90px; ">CLINICA MEDICA SANTA FE</h1>
+        
+    </header>
+    <nav>
+        <a href="/index.html">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="/fotos.html">Fotos</a>
+        <a href="#">Especialidades</a>
+        <a href="/contacto.html">Contacto</a>
+        <a href="/medicos.html">Medicos</a>
+    </nav>
+    <div class="main-content">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Formas de Contacto - Agenda Médica</h2>
+            <form action="submit_form.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono">
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
 
-            <input type="submit" value="Enviar">
-        </form>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
     </div>
 </body>
 </html>
