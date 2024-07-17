@@ -1,137 +1,154 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Fotos Médicas</title>
+    <title>Plataforma de Telemedicina</title>
     <link rel="stylesheet" href="/css/menu.css">
     <style>
-        body1 {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
-            background: url('img/santafe.jpg') center center fixed;
-            background-size: cover;
-           
-        }
-        h6 {
-            color: hsl(0, 95%, 52%);
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 10px;
-            list-style: none;
-            padding: 0;
-        }
-        .gallery li {
-            margin-bottom: 10px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-        }
-        .caption {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
-        }
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header1 {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.7em;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('appointment-form');
+    const appointmentsList = document.getElementById('appointments');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const patientName = document.getElementById('patient-name').value;
+        const appointmentDate = document.getElementById('appointment-date').value;
+        const medicalSpecialty = document.getElementById('medical-specialty').value;
+        
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${patientName}</strong> - ${appointmentDate}, ${medicalSpecialty}`;
+        
+        appointmentsList.appendChild(listItem);
+        
+        form.reset();
+    });
+});
+    </script>
 </head>
 <body>
     <header>
         <h1><img src="/img/logo2.png" alt="" style="width: 90px; ">CLINICA MEDICA SANTA FE</h1>
-            
-        </header>
-        <nav>
-            <a href="/index.html">Inicio</a>
-            <a href="#">Servicios</a>
-            <a href="/fotos.html">Fotos</a>
-            <a href="#">Especialidades</a>
-            <a href="/contacto.html">Contacto</a>
-            <a href="/medicos.html">Medicos</a>
-        </nav>
-    <h6 style="font-size: 20px; color: black; text-align: center;">Galería de Fotos Médicas</h6>
-    <ul class="gallery">
-        <li>
-            <img src="/img/emergencias.jpg" alt="Imagen 1">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen01.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen02.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen03.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen04.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen05.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen06.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen07.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen08.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen09.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen10.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen11.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen12.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen13.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen14.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen15.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen16.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen17.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <li>
-            <img src="img/imagen18.jpg" alt="Imagen 2">
-            <p class="caption"></p>
-        </li>
-        <!-- Agrega más elementos li según sea necesario -->
-    </ul>
+        
+    </header>
+    <nav>
+        <a href="/index.html">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="/fotos.html">Fotos</a>
+        <a href="#">Especialidades</a>
+        <a href="/contacto.html">Contacto</a>
+        <a href="/medicos.html">Medicos</a>
+    </nav>
+    <header1 style="color: black;">
+        <h1>Plataforma de Telemedicina</h1>
+    </header>
+    <main>
+        <section id="appointment-form">
+            <h2>Solicitud de Cita</h2>
+            <form id="appointment-form">
+                <label for="patient-name">Nombre:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+                
+                <label for="appointment-date">Fecha de Cita:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+                
+                <label for="medical-specialty">Especialidad Médica:</label>
+                <select id="medical-specialty" name="medical-specialty">
+                    <option value="cardiology">Cardiología</option>
+                    <option value="dermatology">Dermatología</option>
+                    <option value="neurology">Neurología</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+                
+                <button type="submit">Solicitar Cita</button>
+            </form>
+        </section>
+        
+        <section id="appointment-list">
+            <h2>Lista de Citas</h2>
+            <ul id="appointments"></ul>
+        </section>
+    </main>
 </body>
 </html>
