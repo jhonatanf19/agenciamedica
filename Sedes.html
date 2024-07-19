@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedes de la Clínica Médica</title>
+
+    <link rel="stylesheet" href="css/menu.css">
+
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #003366; /* Color de fondo */
+            font-size: 18px;
+            color: #333; /* Color de texto principal */
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: hsl(0, 0%, 100%); /* Azul */
+            margin-bottom: 20px;
+        }
+        .sedes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .sede {
+            width: 45%;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+        .sede:hover {
+            transform: translateY(-5px); /* Efecto de levantar en hover */
+        }
+        .sede h2 {
+            margin-top: 0;
+            color: #007BFF; /* Azul */
+        }
+        .sede p {
+            margin-bottom: 5px;
+            color: #666; /* Gris oscuro */
+        }
+        .contenido-sede {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .imagen {
+            flex: 150px;
+            margin-left: 20px;
+        }
+        .imagen img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .sede {
+                width: 100%;
+            }
+        }
+	footer {
+		background-color: #002244;
+		color: white;
+		text-align: center;
+		padding: 10px;
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+	}
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <a href="index.html" class="header-1">
+        <div><img src="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe" alt=""></div>
+        <h1>Clínica Santa Fe</h1>
+        </a>
+
+<div class="enlaces">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Sedes.html">Sedes</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="fdecontactos.html">Contacto</a>
+        <a href="medicos.html">Staff Medico</a>
+    </nav>
+    <nav>
+        <a href="https://www.facebook.com/ClinicaSantaFeCostaRica/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/clinicasantafecr/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/51942890155"><i class="fa-brands fa-whatsapp"></i></a>
+    </nav>
+</div>
+</header>
+
+
+    <h1>SEDES SANTA FE</h1>
+
+    <div class="sedes-container">
+        <div class="sede">
+            <div class="contenido-sede">
+                <h2>Sede Central</h2>
+                <p>Dirección: Calle Principal 123, Ciudad Principal</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Horario: Lunes a Viernes de 8am a 6pm</p>
+            </div>
+            <div class="imagen">
+                <img src="img/sede 1.jpeg" alt="Imagen Sede Central">
+            </div>
+        </div>
+
+        <div class="sede">
+            <div class="contenido-sede">
+                <h2>Sucursal Norte</h2>
+                <p>Dirección: Avenida Norte 456, Ciudad Principal</p>
+                <p>Teléfono: (234) 567-8901</p>
+                <p>Horario: Lunes a Viernes de 9am a 7pm</p>
+            </div>
+            <div class="imagen">
+                <img src="img/sede 2.jpeg" alt="Imagen Sucursal Norte">
+            </div>
+        </div>
+
+        <div class="sede">
+            <div class="contenido-sede">
+                <h2>Sucursal Sur</h2>
+                <p>Dirección: Calle Sur 789, Ciudad Principal</p>
+                <p>Teléfono: (345) 678-9012</p>
+                <p>Horario: Lunes a Viernes de 10am a 8pm</p>
+            </div>
+            <div class="imagen">
+                <img src="img/sede 3.jpeg" alt="Imagen Sucursal Sur">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+<footer>
+        <p>© 2024 Clínica Santa Fe. Todos los derechos reservados.</p>
+	<p>Integrantes:</p>
+	<p>Jhon Dennis Quispe Godoy, Jhon David Rosas Paredes y Christopher Benjamín Vega Yanac</p>
+	
+	
+</footer>
+</html>
+
+
