@@ -6,32 +6,34 @@
     <title>Galería de Fotos Médicas</title>
     <link rel="stylesheet" href="/css/menu.css">
     <style>
-        body1 {
+        body {
             font-family: Arial, sans-serif;
             margin: 20px;
             text-align: center;
             background: url('img/santafe.jpg') center center fixed;
             background-size: cover;
-           
         }
         h6 {
             color: hsl(0, 95%, 52%);
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajusta el ancho mínimo de cada columna */
+            gap: 20px; /* Espacio entre las imágenes */
             list-style: none;
             padding: 0;
+            justify-items: center; /* Centra los elementos horizontalmente */
         }
         .gallery li {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center; /* Alinea el texto al centro */
         }
         .gallery img {
-            width: 100%;
+            width: 100%; /* O ajusta el ancho según prefieras */
+            max-width: 100%; /* Asegura que la imagen no se extienda más allá de su contenedor */
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px; /* Ajusta el radio del borde si es necesario */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave para las imágenes */
         }
         .caption {
             font-size: 0.9em;
